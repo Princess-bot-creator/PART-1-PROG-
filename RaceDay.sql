@@ -20,3 +20,12 @@ CREATE TABLE UserRoles (
   FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE,
   FOREIGN KEY (role_id) REFERENCES Roles(role_id) ON DELETE CASCADE
 );
+
+CREATE TABLE Events (
+  event_id INT AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(150) NOT NULL,
+  event_date DATE NOT NULL,
+  location VARCHAR(150) NOT NULL,
+  organizer_id INT NOT NULL,
+  FOREIGN KEY (organizer_id) REFERENCES Users(user_id)
+);
