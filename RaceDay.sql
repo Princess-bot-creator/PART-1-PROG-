@@ -49,6 +49,14 @@ CREATE TABLE Enrolments (
   FOREIGN KEY (category_id) REFERENCES Categories(category_id) ON DELETE CASCADE
 );
 
+-- One-to-One with Enrolments
+CREATE TABLE Results (
+  result_id INT AUTO_INCREMENT PRIMARY KEY,
+  enrolment_id INT UNIQUE NOT NULL,
+  finish_time TIME NOT NULL,
+  position INT,
+  FOREIGN KEY (enrolment_id) REFERENCES Enrolments(enrolment_id) ON DELETE CASCADE
+);
 
 
 
