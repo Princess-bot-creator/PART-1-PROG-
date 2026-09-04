@@ -68,7 +68,13 @@ INSERT INTO Users (email, password_hash, full_name) VALUES
 INSERT INTO UserRoles (user_id, role_id) VALUES
 (1, 1), (2, 1), (3, 2);
 
+INSERT INTO Events (title, event_date, location, organizer_id) VALUES
+('Soweto Marathon 2026', '2026-11-02', 'Soweto, Johannesburg', 3);
 
+INSERT INTO Categories (event_id, category_name, distance_km, entry_fee) VALUES
+(1, '5km Fun Run', 5.0, 150.00),
+(1, '10km Challenge', 10.0, 250.00),
+(1, '21km Half Marathon', 21.1, 400.00);
 
 
 
