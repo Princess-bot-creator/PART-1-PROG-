@@ -39,7 +39,15 @@ CREATE TABLE Categories (
   FOREIGN KEY (event_id) REFERENCES Events(event_id) ON DELETE CASCADE
 );
 
-
+CREATE TABLE Enrolments (
+  enrolment_id INT AUTO_INCREMENT PRIMARY KEY,
+  user_id INT NOT NULL,
+  category_id INT NOT NULL,
+  enrol_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  UNIQUE (user_id, category_id),
+  FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE,
+  FOREIGN KEY (category_id) REFERENCES Categories(category_id) ON DELETE CASCADE
+);
 
 
 
