@@ -60,7 +60,10 @@ CREATE TABLE Results (
 
 INSERT INTO Roles (role_name) VALUES ('Participant'), ('Organizer');
 
-
+INSERT INTO Users (email, password_hash, full_name) VALUES
+('thabo@raceday.co.za', 'hashed_pw1', 'Thabo Mokoena'),
+('lerato@raceday.co.za', 'hashed_pw2', 'Lerato Dlamini'),
+('admin@raceday.co.za', 'hashed_pw3', 'Admin Organizer');
 
 
 
