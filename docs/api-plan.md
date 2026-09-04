@@ -19,3 +19,6 @@
 | 15 | GET | /api/categories/{id}/enrolments | See all runners in a category | Organizer | None | 200 OK + runners list, 403 Not allowed |
 | 16 | POST | /api/results | Record finishing time for runner | Organizer | { "enrolment_id": 1, "finish_time": "00:32:10", "position": 5 } | 201 Result saved, 404 Enrolment missing |
 | 17 | GET | /api/events/{id}/results | View final results for whole event | Any | None | 200 OK + results sorted by position |
+ #NOTES
+  --All routes return JSON
+  --Auth usses JWT Bearer tokens
