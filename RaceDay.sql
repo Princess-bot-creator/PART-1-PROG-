@@ -1,4 +1,6 @@
--- RaceDay Database - Soweto Marathon
+
+-- RaceDay Database - Race Enrollement System
+-- Author ( PRINCESS MOLELE ) - ST10487034
 CREATE TABLE Users (
   user_id INT AUTO_INCREMENT PRIMARY KEY,
   email VARCHAR(100) UNIQUE NOT NULL,
