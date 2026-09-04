@@ -29,3 +29,31 @@ CREATE TABLE Events (
   organizer_id INT NOT NULL,
   FOREIGN KEY (organizer_id) REFERENCES Users(user_id)
 );
+
+CREATE TABLE Categories (
+  category_id INT AUTO_INCREMENT PRIMARY KEY,
+  event_id INT NOT NULL,
+  category_name VARCHAR(100) NOT NULL,
+  distance_km DECIMAL(5,2) NOT NULL,
+  entry_fee DECIMAL(10,2) NOT NULL,
+  FOREIGN KEY (event_id) REFERENCES Events(event_id) ON DELETE CASCADE
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
