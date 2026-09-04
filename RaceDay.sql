@@ -40,7 +40,7 @@ CREATE TABLE Categories (
   entry_fee DECIMAL(10,2) NOT NULL,
   FOREIGN KEY (event_id) REFERENCES Events(event_id) ON DELETE CASCADE
 );
-
+-- Enrolmemts links Users to Categories ( many to many )
 CREATE TABLE Enrolments (
   enrolment_id INT AUTO_INCREMENT PRIMARY KEY,
   user_id INT NOT NULL,
