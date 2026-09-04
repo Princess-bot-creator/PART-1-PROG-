@@ -65,7 +65,8 @@ INSERT INTO Users (email, password_hash, full_name) VALUES
 ('lerato@raceday.co.za', 'hashed_pw2', 'Lerato Dlamini'),
 ('admin@raceday.co.za', 'hashed_pw3', 'Admin Organizer');
 
-
+INSERT INTO UserRoles (user_id, role_id) VALUES
+(1, 1), (2, 1), (3, 2);
 
 
 
