@@ -11,3 +11,12 @@ CREATE TABLE Roles (
   role_id INT AUTO_INCREMENT PRIMARY KEY,
   role_name VARCHAR(50) UNIQUE NOT NULL
 );
+
+-- Solves Many-to-Many: Users can have many Roles
+CREATE TABLE UserRoles (
+  user_id INT NOT NULL,
+  role_id INT NOT NULL,
+  PRIMARY KEY (user_id, role_id),
+  FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE,
+  FOREIGN KEY (role_id) REFERENCES Roles(role_id) ON DELETE CASCADE
+);
