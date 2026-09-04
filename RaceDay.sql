@@ -58,7 +58,7 @@ CREATE TABLE Results (
   FOREIGN KEY (enrolment_id) REFERENCES Enrolments(enrolment_id) ON DELETE CASCADE
 );
 
-
+INSERT INTO Roles (role_name) VALUES ('Participant'), ('Organizer');
 
 
 
