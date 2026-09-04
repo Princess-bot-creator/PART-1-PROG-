@@ -76,7 +76,8 @@ INSERT INTO Categories (event_id, category_name, distance_km, entry_fee) VALUES
 (1, '10km Challenge', 10.0, 250.00),
 (1, '21km Half Marathon', 21.1, 400.00);
 
-
+INSERT INTO Enrolments (user_id, category_id) VALUES (1, 2), (2, 3);
+INSERT INTO Results (enrolment_id, finish_time, position) VALUES (1, '00:58:23', 15), (2, '02:10:45', 42);
 
 
 
