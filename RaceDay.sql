@@ -80,7 +80,7 @@ INSERT INTO Categories (event_id, category_name, distance_km, entry_fee) VALUES
 
 INSERT INTO Enrolments (user_id, category_id) VALUES (1, 2), (2, 3);
 INSERT INTO Results (enrolment_id, finish_time, position) VALUES (1, '00:58:23', 15), (2, '02:10:45', 42);
-
+-- End of file
 
 
 
